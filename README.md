@@ -4,6 +4,15 @@ An AI agent for brand reputation — news monitoring, social sentiment tracking,
 
 Part of [Agency Agents OS](https://github.com/Anil-matcha/agency-agents-os), an open ecosystem of specialized AI agents for real business work.
 
+## Related Projects
+
+- [Agency Agents OS](https://github.com/Anil-matcha/agency-agents-os) — the central catalog this repo is part of.
+- [ai-social-agent](https://github.com/SamurAIGPT/ai-social-agent) — shares this repo's sentiment/listening data sources.
+- [ai-ecommerce-agent](https://github.com/SamurAIGPT/ai-ecommerce-agent) — shares this repo's Amazon/Google review-data needs.
+- [ai-competitor-intelligence-agent](https://github.com/SamurAIGPT/ai-competitor-intelligence-agent) — feeds this repo's findings into cross-cutting competitive audits.
+- [MuAPI MCP docs](https://muapi.ai/docs/mcp) — connect this repo's `SKILL.md` files via MCP.
+- [MuAPI access keys](https://muapi.ai/access-keys) — create the API key this agent needs.
+
 ## What this covers
 
 This repo is the umbrella for anything an agency or in-house team would call "the AI reputation agent": watching news, social, and review channels for brand mentions, surfacing sentiment shifts and reputation risks, and drafting (never publishing) the response when something needs one.
