@@ -4,7 +4,7 @@ slug: review-mining
 version: 1.0.0
 category: reputation
 description: Aggregates and summarizes themes from reviews (Amazon, Google, app stores) to flag reputation risks.
-status: coming-soon
+status: blueprint
 muapi_capabilities:
   - reputation.review_search
 required_connections:
@@ -39,9 +39,7 @@ Aggregate reviews of a product or business across review platforms (e-commerce, 
 
 ## Available Muapi capabilities
 
-(planned, not yet live)
-
-- `reputation.review_search` — search and aggregate reviews across review platforms, with rating, date, and platform metadata.
+- `reputation.review_search` — search and aggregate reviews across review platforms, with rating, date, and platform metadata. **Partially live:** Google Business Profile reviews are backed by Muapi's live SEO API, `POST /api/v1/seo-business-reviews`. Amazon, app-store, and Trustpilot/Tripadvisor review sources are still not wired up — treat this agent as scoped to Google reviews only until those land.
 
 ## Workflow
 

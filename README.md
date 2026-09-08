@@ -23,7 +23,7 @@ This repo is the umbrella for anything an agency or in-house team would call "th
 |---|---|---|
 | [News Monitoring](agents/news-monitoring/SKILL.md) | Tracks news and press mentions of a brand and flags anything requiring a response | Coming Soon |
 | [Social Sentiment](agents/social-sentiment/SKILL.md) | Tracks sentiment trends about a brand across social platforms over time | Coming Soon |
-| [Review Mining](agents/review-mining/SKILL.md) | Aggregates and summarizes themes from reviews (Amazon, Google, app stores) to flag reputation risks | Coming Soon |
+| [Review Mining](agents/review-mining/SKILL.md) | Aggregates and summarizes themes from reviews (Amazon, Google, app stores) to flag reputation risks | Blueprint (Google reviews only) |
 | [PR & Communications](agents/pr-communications/SKILL.md) | Drafts response statements and talking points for a flagged reputation event, for human review before publishing | Coming Soon |
 
 ## Required Muapi APIs
@@ -65,7 +65,7 @@ News monitoring, social sentiment, and review mining are `read-only` — they ob
 
 ## Status and limitations
 
-All four sub-agents are Coming Soon. They depend on news-search, social-sentiment, and review-data capabilities that are not yet live on Muapi. Once those capabilities ship, each `SKILL.md` will be updated from Blueprint/Coming Soon to a working spec.
+Review Mining is **Blueprint for its Google reviews source** — `reputation.review_search` is backed by Muapi's already-live `seo-business-reviews` endpoint for Google Business Profile reviews specifically; Amazon, app-store, and Trustpilot/Tripadvisor sources are still not wired up. The other three sub-agents are Coming Soon: they depend on news-search and social-sentiment capabilities that are not yet live on Muapi. Once those capabilities ship, each `SKILL.md` will be updated from Blueprint/Coming Soon to a working spec.
 
 ## Contributing
 
