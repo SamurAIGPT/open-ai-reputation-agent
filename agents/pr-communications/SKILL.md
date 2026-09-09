@@ -41,9 +41,13 @@ Draft a response statement or talking points for a flagged reputation event — 
 
 ## Available Muapi capabilities
 
-(planned, not yet live)
+Mixed status per capability — still not usable end-to-end until all three either land or the workflow is adjusted to work without the missing ones:
 
-- `reputation.news_search`, `social.sentiment_analysis`, `reputation.review_search` — used only to pull supporting context for a draft, never to publish.
+- `reputation.news_search` — coded, **not yet live in production** (needs a DB sync). Once live: keyword or company-domain news search, no date-range filter, no publication list.
+- `reputation.review_search` — **partially live**: Google Business Profile reviews only, via Muapi's live SEO API (`POST /api/v1/seo-business-reviews`). Amazon, app-store, and Trustpilot/Tripadvisor sources are not wired up.
+- `social.sentiment_analysis` — **no vendor sells this as a discrete Muapi capability.** Sentiment must be computed by the host assistant from raw text returned by another capability (e.g. review or post text) and labeled `assistant-derived`, never presented as a Muapi-provided metric.
+
+Used only to pull supporting context for a draft, never to publish.
 
 ## Workflow
 
@@ -80,7 +84,7 @@ A labeled draft package:
 
 ## Failure and missing-data behavior
 
-The underlying context capabilities (`reputation.news_search`, `social.sentiment_analysis`, `reputation.review_search`) are not yet live on Muapi, so this agent cannot yet pull fresh supporting context automatically — it should say so and ask the user to supply the event facts directly rather than fabricating context. Even once those capabilities are live, this agent must still refuse to draft around unconfirmed claims — insufficient or contradictory input is reported back to the user as a gap to fill, not smoothed over with invented facts.
+The underlying context capabilities are at different stages: `reputation.news_search` is coded but not yet live in production; `reputation.review_search` is live for Google reviews only; `social.sentiment_analysis` has no Muapi-provided equivalent at all and must be computed by the host assistant from raw text, labeled `assistant-derived`. Until `reputation.news_search` is confirmed live, this agent cannot pull fresh news context automatically — it should say so and ask the user to supply the event facts directly rather than fabricating context. Even once every capability that can go live has, this agent must still refuse to draft around unconfirmed claims — insufficient or contradictory input is reported back to the user as a gap to fill, not smoothed over with invented facts.
 
 ## Example interactions
 
