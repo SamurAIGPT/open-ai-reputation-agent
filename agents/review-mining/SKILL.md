@@ -71,7 +71,7 @@ A structured theme report:
 
 ## Failure and missing-data behavior
 
-`reputation.review_search` is not yet live on Muapi. Until it ships, this agent cannot pull or summarize real reviews — it must say so directly (e.g. "Review search isn't available on Muapi yet; this agent can't produce real results") instead of inventing themes, ratings, or excerpts. Once live, platforms or listings with no reviews in the window should be reported as such rather than skipped silently.
+Google Business Profile reviews are live and tested (2026-09-09) via `POST /api/v1/seo-business-reviews`. Amazon, app-store, and Trustpilot/Tripadvisor sources are not yet wired up — for those platforms, this agent must say so directly (e.g. "Amazon review search isn't available on Muapi yet") instead of inventing themes, ratings, or excerpts. A listing with no Google reviews in the window should be reported as such rather than skipped silently.
 
 ## Example interactions
 
