@@ -2,11 +2,11 @@
 
 An AI agent for brand reputation — news monitoring, social sentiment tracking, review mining, and PR response drafting — backed by real news, social, and review-data APIs.
 
-Part of [Agency Agents OS](https://github.com/Anil-matcha/agency-agents-os), an open ecosystem of specialized AI agents for real business work.
+Part of [Open Business Agents](https://github.com/Anil-matcha/open-business-agents), an open ecosystem of specialized AI agents for real business work.
 
 ## Related Projects
 
-- [Agency Agents OS](https://github.com/Anil-matcha/agency-agents-os) — the central catalog this repo is part of.
+- [Open Business Agents](https://github.com/Anil-matcha/open-business-agents) — the central catalog this repo is part of.
 - [ai-social-agent](https://github.com/SamurAIGPT/ai-social-agent) — shares this repo's sentiment/listening data sources.
 - [ai-ecommerce-agent](https://github.com/SamurAIGPT/ai-ecommerce-agent) — shares this repo's Amazon/Google review-data needs.
 - [ai-competitor-intelligence-agent](https://github.com/SamurAIGPT/ai-competitor-intelligence-agent) — feeds this repo's findings into cross-cutting competitive audits.
@@ -67,9 +67,13 @@ News monitoring, social sentiment, and review mining are `read-only` — they ob
 
 Review Mining is **Blueprint for its Google reviews source** — `reputation.review_search` is backed by Muapi's already-live `seo-business-reviews` endpoint for Google Business Profile reviews specifically; Amazon, app-store, and Trustpilot/Tripadvisor sources are still not wired up. The other three sub-agents are Coming Soon: they depend on news-search and social-sentiment capabilities that are not yet live on Muapi. Once those capabilities ship, each `SKILL.md` will be updated from Blueprint/Coming Soon to a working spec.
 
+## Guides
+
+- [Mine Google Business reviews for recurring themes](guides/mine-google-business-reviews-for-recurring-themes.md) — keep trend claims tied to comparable samples and live review scope.
+
 ## Contributing
 
-See [Agency Agents OS CONTRIBUTING.md](https://github.com/Anil-matcha/agency-agents-os/blob/main/CONTRIBUTING.md).
+See [Open Business Agents CONTRIBUTING.md](https://github.com/Anil-matcha/open-business-agents/blob/main/CONTRIBUTING.md).
 
 ## License
 
